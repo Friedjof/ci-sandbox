@@ -26,4 +26,4 @@ jobs:
           echo "Logging..."
           echo "github.event_name: ${{ github.event_name }}"
           echo "github.ref: ${{ github.ref }}"
-          echo "MESSAGE: ${{ $MESSAGE }}"
+          echo "MESSAGE: $MESSAGE"
