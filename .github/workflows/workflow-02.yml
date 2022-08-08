@@ -3,7 +3,7 @@ on:
     branches:
       - "workflow"
     paths:
-      - "./sandbox/**.py"
+      - "./sandbox/**/*.py"
 
 jobs:
   run-python:
