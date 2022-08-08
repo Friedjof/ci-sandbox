@@ -1,7 +1,7 @@
 on:
   push:
     paths:
-      - "./build.py"
+      - "build.py"
 
 jobs:
   run-python:

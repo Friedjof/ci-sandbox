@@ -1,10 +1,8 @@
 on:
   push:
-    branches:
-      - "**"
     paths:
-      - "*.py"
-      - "!./build.py"
+      - "main.py"
+      - "sandbox/**/*.py"
 
 jobs:
   run-python:
