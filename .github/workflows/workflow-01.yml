@@ -2,8 +2,6 @@ on:
   push:
     branches:
       - "**"
-    paths:
-      - "./sandbox/**/*.py"
 
 jobs:
   run-python:
