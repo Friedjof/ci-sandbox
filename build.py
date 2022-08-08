@@ -4,4 +4,3 @@ if __name__ == '__main__':
     # Do something here [...]
     print('...done.')
     # Done building the project
-    print('Build complete.')
