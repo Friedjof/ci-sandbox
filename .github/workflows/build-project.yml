@@ -1,12 +1,13 @@
 name: 'Build Project'
 
 on:
+  create:
   push:
     paths:
       - "build.py"
 
 jobs:
-  run-python:
+  build-python:
     runs-on: ubuntu-latest
     steps:
       - name: 'checkout'
@@ -17,3 +18,9 @@ jobs:
           python-version: '3.10'
       - name: 'Build Python'
         run: python3 ./build.py
+      - name: 'Logging'
+        run: |
+          echo "Logging..."
+          echo "Deploying to production server on branch $GITHUB_REF"
+          echo "github.event_name: ${{ github.event_name }}"
+          echo "github.ref: ${{ github.ref }}"
