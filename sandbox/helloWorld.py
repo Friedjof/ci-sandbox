@@ -1,4 +1,7 @@
 class HelloWorld:
+    """
+    This object is a Singleton.
+    """
     def __init__(self):
         self.message = 'Hello World!'
 
