@@ -21,6 +21,5 @@ jobs:
       - name: 'Logging'
         run: |
           echo "Logging..."
-          echo "Deploying to production server on branch $GITHUB_REF"
           echo "github.event_name: ${{ github.event_name }}"
           echo "github.ref: ${{ github.ref }}"
