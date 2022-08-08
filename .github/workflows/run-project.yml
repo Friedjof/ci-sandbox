@@ -3,10 +3,7 @@ name: Run
 on:
   workflow_run:
     workflows: [ 'Build' ]
-    types:
-      - requested
-    branches:
-      - '**'
+    types: [requested]
 
 jobs:
   run-python:
