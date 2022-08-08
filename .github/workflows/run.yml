@@ -7,9 +7,8 @@ on:
     types:
       - completed
   push:
-    paths:
-      - "**"
-      - "!build.py"
+    paths-ignore:
+      - "build.py"
 
 jobs:
   run-python:
