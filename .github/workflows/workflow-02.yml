@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - "workflow"
+      - "workflows"
     paths:
       - "./sandbox/**/*.py"
 
