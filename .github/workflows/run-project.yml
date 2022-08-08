@@ -1,8 +1,15 @@
+name: "Run Project"
+
 on:
   push:
+    branches:
+      - "**"
     paths:
-      - "main.py"
-      - "sandbox/**/*.py"
+      - "!build.py"
+  workflow_run:
+    workflows: [ "Build Project" ]
+    types:
+      - completed
 
 jobs:
   run-python:
