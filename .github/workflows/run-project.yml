@@ -1,11 +1,6 @@
 name: "Run Project"
 
 on:
-  push:
-    branches:
-      - "**"
-    paths:
-      - "!build.py"
   workflow_run:
     workflows: [ "Build Project" ]
     types:
