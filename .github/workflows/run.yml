@@ -9,6 +9,7 @@ on:
   push:
     paths:
       - "**"
+      - "!**/workflows/*"
       - "!build.py"
 
 jobs:
@@ -29,3 +30,4 @@ jobs:
           echo "github.event_name: ${{ github.event_name }}"
           echo "github.ref: ${{ github.ref }}"
           echo "MESSAGE: $MESSAGE"
+          echo "JSON: ${{ github.event }}"
