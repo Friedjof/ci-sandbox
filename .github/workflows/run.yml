@@ -9,7 +9,7 @@ on:
   push:
     paths:
       - "**"
-      - "!./.github/workflows/*"
+      - "!**/workflows/*"
       - "!build.py"
 
 jobs:
