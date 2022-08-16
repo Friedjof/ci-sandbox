@@ -31,4 +31,4 @@ jobs:
           echo "JSON: ${{ github.event }}"
       - name: 'API trigger'
         run: |
-          curl -X POST -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Friedjof/ci-sandbox/actions/workflows/42/dispatches -d '{"ref":"${{ github.ref_name }}"}'
+          curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $PAT" https://api.github.com/repos/Friedjof/ci-sandbox/dispatches -d '{"event_type":"run-project","client_payload":{"branch":"ref":"${{ github.ref_name }}"}}'
