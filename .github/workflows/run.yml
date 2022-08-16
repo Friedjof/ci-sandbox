@@ -1,16 +1,16 @@
 name: run
 
 on:
-  workflow_run:
-    workflows:
-      - build
-    types:
-      - completed
   push:
     paths:
       - "**"
       - "!**/workflows/*"
       - "!build.py"
+  workflow_dispatch:
+    inputs:
+      attributes:
+        description: 'Attributes [for API only]'
+        required: false
 
 jobs:
   run-python:
