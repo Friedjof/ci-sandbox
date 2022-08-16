@@ -6,11 +6,9 @@ on:
       - "**"
       - "!**/workflows/*"
       - "!build.py"
-  workflow_dispatch:
-    inputs:
-      attributes:
-        description: 'Attributes [for API only]'
-        required: false
+  repository_dispatch:
+    types:
+      - run-project
 
 jobs:
   run-python:
@@ -31,3 +29,6 @@ jobs:
           echo "github.ref: ${{ github.ref }}"
           echo "MESSAGE: $MESSAGE"
           echo "JSON: ${{ github.event }}"
+      - name: 'API trigger'
+        run: |
+          curl -X POST -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/Friedjof/ci-sandbox/actions/workflows/42/dispatches -d '{"ref":"${{ github.ref_name }}"}'
